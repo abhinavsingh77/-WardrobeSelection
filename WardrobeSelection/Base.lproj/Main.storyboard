@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="WRSRootViewController" id="BYZ-38-t0r" customClass="WRSRootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135" y="-235"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="7OE-VG-ydb">
+            <objects>
+                <viewController storyboardIdentifier="WRSLoginViewController" id="iFp-Fe-Bu5" customClass="WRSLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KmM-lO-1Cr"/>
+                        <viewControllerLayoutGuide type="bottom" id="XJH-Wh-ggo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bUL-B2-lGQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eZ-NH-gwn">
+                                <rect key="frame" x="20" y="269" width="280" height="30"/>
+                                <state key="normal" title="Login With Facebook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginClicked:" destination="iFp-Fe-Bu5" eventType="touchUpInside" id="WCj-MN-L5t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="8eZ-NH-gwn" secondAttribute="centerY" id="H6e-MV-elm"/>
+                            <constraint firstItem="8eZ-NH-gwn" firstAttribute="leading" secondItem="bUL-B2-lGQ" secondAttribute="leading" constant="20" id="LYz-hx-5xn"/>
+                            <constraint firstAttribute="trailing" secondItem="8eZ-NH-gwn" secondAttribute="trailing" constant="20" id="viC-Je-7m2"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="loginButton" destination="8eZ-NH-gwn" id="dmk-tK-2Wf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15j-JD-A8W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="-235"/>
+        </scene>
+        <!--Bookmarks View Controller-->
+        <scene sceneID="UOb-Q2-9Zc">
+            <objects>
+                <viewController storyboardIdentifier="WRSBookmarksViewController" automaticallyAdjustsScrollViewInsets="NO" id="3NK-Xc-v6I" customClass="WRSBookmarksViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3u9-6H-dcR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lm3-ub-JFA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m3g-x2-jyM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Bd-4M-pfu">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R77-zB-aYe">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3NK-Xc-v6I" id="iMy-0m-GIs"/>
+                                    <outlet property="delegate" destination="3NK-Xc-v6I" id="4YT-zW-qFy"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6Bd-4M-pfu" secondAttribute="trailing" id="BJv-6R-3k4"/>
+                            <constraint firstAttribute="bottom" secondItem="6Bd-4M-pfu" secondAttribute="bottom" id="CLy-gy-qwz"/>
+                            <constraint firstItem="6Bd-4M-pfu" firstAttribute="leading" secondItem="m3g-x2-jyM" secondAttribute="leading" id="Efm-8n-U23"/>
+                            <constraint firstItem="6Bd-4M-pfu" firstAttribute="top" secondItem="m3g-x2-jyM" secondAttribute="top" id="GAR-Cg-lFT"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="bookmarksCollectionView" destination="6Bd-4M-pfu" id="pjn-EJ-oEa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Dt-S6-vbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135" y="412"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="mfQ-6n-650">
+            <objects>
+                <viewController storyboardIdentifier="WRSSettingsViewController" automaticallyAdjustsScrollViewInsets="NO" id="Z2q-jC-cKk" customClass="WRSSettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oSf-NG-c7D"/>
+                        <viewControllerLayoutGuide type="bottom" id="bDp-6x-gTS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OSM-no-m21">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9tw-zx-VDM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="489"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Z2q-jC-cKk" id="9Kz-64-XIM"/>
+                                    <outlet property="delegate" destination="Z2q-jC-cKk" id="ALg-xU-oxF"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxV-zY-LD4">
+                                <rect key="frame" x="20" y="530" width="280" height="30"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutClicked:" destination="Z2q-jC-cKk" eventType="touchUpInside" id="P5l-5I-qOs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgn-my-Ryw">
+                                <rect key="frame" x="20" y="499" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pgn-my-Ryw" firstAttribute="leading" secondItem="OSM-no-m21" secondAttribute="leading" constant="20" id="45f-Ba-baz"/>
+                            <constraint firstAttribute="trailing" secondItem="9tw-zx-VDM" secondAttribute="trailing" id="58m-AM-NOH"/>
+                            <constraint firstItem="Pgn-my-Ryw" firstAttribute="top" secondItem="9tw-zx-VDM" secondAttribute="bottom" constant="10" id="6xi-ul-8Ps"/>
+                            <constraint firstAttribute="trailing" secondItem="Pgn-my-Ryw" secondAttribute="trailing" constant="20" id="Q5Y-pa-TLN"/>
+                            <constraint firstItem="9tw-zx-VDM" firstAttribute="leading" secondItem="OSM-no-m21" secondAttribute="leading" id="SBq-v8-UCS"/>
+                            <constraint firstAttribute="trailing" secondItem="bxV-zY-LD4" secondAttribute="trailing" constant="20" id="SdF-hi-wiU"/>
+                            <constraint firstItem="bxV-zY-LD4" firstAttribute="leading" secondItem="OSM-no-m21" secondAttribute="leading" constant="20" id="YoH-Fl-bc1"/>
+                            <constraint firstAttribute="bottom" secondItem="bxV-zY-LD4" secondAttribute="bottom" constant="8" id="gMp-iM-wOP"/>
+                            <constraint firstItem="bxV-zY-LD4" firstAttribute="top" secondItem="Pgn-my-Ryw" secondAttribute="bottom" constant="10" id="gTn-ng-Ikm"/>
+                            <constraint firstItem="9tw-zx-VDM" firstAttribute="top" secondItem="OSM-no-m21" secondAttribute="top" id="w0W-wR-dyT"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="logOutButton" destination="bxV-zY-LD4" id="pqc-KJ-d3P"/>
+                        <outlet property="theTableView" destination="9tw-zx-VDM" id="LHA-oC-txB"/>
+                        <outlet property="userNameLabel" destination="Pgn-my-Ryw" id="rSU-Vk-e6Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPj-Al-sUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135" y="1064"/>
+        </scene>
+        <!--Todays Pick View Controller-->
+        <scene sceneID="X9t-qp-Ztb">
+            <objects>
+                <viewController storyboardIdentifier="WRSTodaysPickViewController" automaticallyAdjustsScrollViewInsets="NO" id="H1c-MA-7b5" customClass="WRSTodaysPickViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jz1-hA-X44"/>
+                        <viewControllerLayoutGuide type="bottom" id="W2p-Ta-b81"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wbm-n9-0x4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uwj-gj-gP4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="284"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xd0-Aw-RrX">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tCE-69-WPm">
+                                <rect key="frame" x="0.0" y="284" width="320" height="284"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="96Q-WN-sVL">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uwj-gj-gP4" firstAttribute="leading" secondItem="wbm-n9-0x4" secondAttribute="leading" id="0NO-Fa-jKG"/>
+                            <constraint firstAttribute="bottom" secondItem="tCE-69-WPm" secondAttribute="bottom" id="BCa-Ki-ZeB"/>
+                            <constraint firstAttribute="trailing" secondItem="uwj-gj-gP4" secondAttribute="trailing" id="OpW-wR-cgB"/>
+                            <constraint firstItem="tCE-69-WPm" firstAttribute="leading" secondItem="wbm-n9-0x4" secondAttribute="leading" id="TsI-yt-jhq"/>
+                            <constraint firstItem="uwj-gj-gP4" firstAttribute="top" secondItem="wbm-n9-0x4" secondAttribute="top" id="Ua2-Zw-4nn"/>
+                            <constraint firstAttribute="trailing" secondItem="tCE-69-WPm" secondAttribute="trailing" id="d1l-1b-hyG"/>
+                            <constraint firstItem="tCE-69-WPm" firstAttribute="height" secondItem="uwj-gj-gP4" secondAttribute="height" id="fl8-eW-dLz"/>
+                            <constraint firstItem="tCE-69-WPm" firstAttribute="top" secondItem="uwj-gj-gP4" secondAttribute="bottom" id="tbk-Xu-thC"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="bottomCollectionView" destination="tCE-69-WPm" id="OrW-wh-gks"/>
+                        <outlet property="topCollectionView" destination="uwj-gj-gP4" id="8vL-Ld-r5J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="idS-5J-mqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="1064"/>
+        </scene>
+        <!--Priorty Selection View Controller-->
+        <scene sceneID="bGg-Uk-F4y">
+            <objects>
+                <viewController storyboardIdentifier="WRSPriortySelectionViewController" id="qy6-EY-kS8" customClass="WRSPriortySelectionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3wW-Rr-YlB"/>
+                        <viewControllerLayoutGuide type="bottom" id="qd8-Bd-fT6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QyI-17-mIO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="arA-AO-bgn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="qy6-EY-kS8" id="vmd-4M-UeG"/>
+                                    <outlet property="delegate" destination="qy6-EY-kS8" id="Rn3-2P-tef"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="arA-AO-bgn" firstAttribute="leading" secondItem="QyI-17-mIO" secondAttribute="leading" id="6gg-Tv-IBm"/>
+                            <constraint firstItem="arA-AO-bgn" firstAttribute="top" secondItem="QyI-17-mIO" secondAttribute="top" id="T5e-gL-qeC"/>
+                            <constraint firstAttribute="trailing" secondItem="arA-AO-bgn" secondAttribute="trailing" id="brN-lD-Mp5"/>
+                            <constraint firstAttribute="bottom" secondItem="arA-AO-bgn" secondAttribute="bottom" id="fL7-bG-kXK"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="theTableView" destination="arA-AO-bgn" id="onf-K7-6qU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Umd-WN-vMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135" y="1718"/>
+        </scene>
+        <!--Wardrobe View Controller-->
+        <scene sceneID="GXk-uF-9kv">
+            <objects>
+                <viewController storyboardIdentifier="WRSWardrobeViewController" id="Ocf-Xk-hew" customClass="WRSWardrobeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HfN-Zh-iwb"/>
+                        <viewControllerLayoutGuide type="bottom" id="10G-4u-wLo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MGn-ug-bCj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="czd-lz-Y7i">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CW4-wH-yTX">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ocf-Xk-hew" id="s5J-sR-zen"/>
+                                    <outlet property="delegate" destination="Ocf-Xk-hew" id="E4E-gk-Mv6"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="czd-lz-Y7i" secondAttribute="bottom" id="AiW-3I-SM5"/>
+                            <constraint firstAttribute="trailing" secondItem="czd-lz-Y7i" secondAttribute="trailing" id="FIA-SI-8Qo"/>
+                            <constraint firstItem="czd-lz-Y7i" firstAttribute="leading" secondItem="MGn-ug-bCj" secondAttribute="leading" id="RKi-eB-Fty"/>
+                            <constraint firstItem="czd-lz-Y7i" firstAttribute="top" secondItem="MGn-ug-bCj" secondAttribute="top" id="jUu-UP-efx"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="wardrobeCollectionView" destination="czd-lz-Y7i" id="3oH-2J-5k6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vaf-Pm-zdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="412"/>
+        </scene>
+    </scenes>
+</document>
